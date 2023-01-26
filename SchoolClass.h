@@ -3,8 +3,8 @@ class SchoolClass
 public:
         SchoolClass(string name, vector<int> time, int days, int credits, string subject, string building);
 
-	bool partOfMajor(Student person)
-        bool partOfMinor(Student person)
+	bool partOfMajor(string yourMajor)
+        bool partOfMinor(string yourMinor)
         int timeUntil(Date currentTime)
 	
 	string getName();
