@@ -1,3 +1,8 @@
+// Chariety Moler
+// file: SchoolClass.cpp
+// 30 January 2023
+// This file should further define all of the functions. 
+
 #include <iostream>
 #include "SchoolClass.h"
 
