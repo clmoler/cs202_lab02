@@ -6,23 +6,27 @@
 #include <iostream>
 #include "SchoolClass.h"
 
-SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, string subject, string building) {
-  class_name = " ";
-  time_of_class = " ";
-  days_of_week = 0;
-  number_of_credits = 0;
-  subject_of_class = " ";
-  location = " ";
-}
+SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, string subject, string building) 
+  : class_name(" ")
+  , time_of_class(" ")
+  , days_of_week(0)
+  , number_of_credits(0)
+  , subject_of_class(" ")
+  , location(" ")
+  {
+	  // Intentionally left blank.
+  }
 
-SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, std::string subject, std::string building) {
-  class_name = _name;
-  time_of_class = _time;
-  days_of_week = _days;
-  number_of_credits = _credits;
-  subject_of_class = _subject;
-  location = _building;
-}
+SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, std::string subject, std::string building) 
+  : class_name(_name)
+  , time_of_class(_time)
+  , days_of_week(_days)
+  , number_of_credits(_credits)
+  , subject_of_class(_subject)
+  , location(_building)
+  {
+	  // Intentionally left blank.
+  }
 
 bool partOfMajor(std::string yourMajor)
 {
