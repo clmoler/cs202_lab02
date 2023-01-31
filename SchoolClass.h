@@ -3,21 +3,20 @@ class SchoolClass
 public:
         SchoolClass(string name, vector<int> time, int days, int credits, string subject, string building);
 
-	bool partOfMajor(string yourMajor)
-        bool partOfMinor(string yourMinor)
-        int timeUntil(Date currentTime)
+	bool partOfMajor(string yourMajor);
+        int timeUntil(Date currentTime);
 	
-	string getName();
-	vector<int> getTime();
-	int getDays();
+	std::string getName();
+	std::vector<int> getTime();
+	std::vector<int> getDays();
 	int getCredits();
-	string getSubject();
-	string getBuilding();
+	std::string getSubject();
+	std::string getBuilding();
 private:
-        string _name;
-        vector<int> _time;
-        int _days; // Monday = 1, Tuesday = 2, Wednesday = 4, Thursday = 8, Friday = 16. Or choose alternate implementation thats easier to wrap your head around.
+	std::string _name;
+	std::vector<int> _time;
+	std::vector<int> _days;
         int _credits;
-        string _subject;
-        string _building;
+	std::string _subject;
+	std::string _building;
 }

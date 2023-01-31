@@ -15,35 +15,55 @@ SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, s
   location = " ";
 }
 
-SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, string subject, string building) {
-  class_name = name;
-  time_of_class = time;
-  days_of_week = days;
-  number_of_credits = credits;
-  subject_of_class = subject;
-  location = building;
+SchoolClass::SchoolClass(string name, vector<int> time, int days, int credits, std::string subject, std::string building) {
+  class_name = _name;
+  time_of_class = _time;
+  days_of_week = _days;
+  number_of_credits = _credits;
+  subject_of_class = _subject;
+  location = _building;
+}
+
+bool partOfMajor(std::string yourMajor)
+{
+	if(yourMajor == _subject)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+SchoolClass::timeUntil(Date currentTime)
+{
+	int runningTotal;
+	//Actually making a date parser seems rough, but the idea is
+	//oh how many days do we have until the next class. Multiply the
+	//the days left by 24, and then solve the hours
 }
 
 std::string SchoolClass::getName() const {
-  return class_name;
+  return _name;
 }
 
-std::string SchoolClass::getTime() const {
-  return time_of_class;
+std::vector<int> SchoolClass::getTime() const {
+  return _time;
 }
 
-std::string SchoolClass::getDays() const {
-  return days_of_week;
+std::vector<int> SchoolClass::getDays() const {
+  return _days;
 }
 
-std::string SchoolClass::getCredits() const {
-  return number_of_credits;
+int SchoolClass::getCredits() const {
+  return _credits;
 }
 
 std::string SchoolClass::getSubject() const {
-  return subject_of_class;
+  return _subject;
 }
 
 std::string SchoolClass::getBuilding() const {
-  return location;
+  return _building;
 }
